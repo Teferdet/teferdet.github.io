@@ -13,8 +13,8 @@
 .main-button:hover {
     background: #505050;
     border-color: #505050;
+    cursor: pointer;
 }
-
 .inside-button {
     background: None;
     display: flex;
