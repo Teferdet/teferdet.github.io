@@ -82,8 +82,8 @@
   }
 
   .avatar {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-top-left-radius: 70px;
     border-top-right-radius: 70px;
     border-bottom-left-radius: 70px;
@@ -101,6 +101,53 @@
 
   .description {
     font-size: 20px;
+  }
+
+  .button-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    align-items: center;
+  }
+
+  .row {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .text {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .text h1 {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 15px;
   }
 
   .button-container {

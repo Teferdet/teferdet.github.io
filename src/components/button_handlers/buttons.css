@@ -1,13 +1,9 @@
 .main-button {
-    width: 140px;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: solid #373737;
     background: #373737;
-    border-radius: 8px;
-    margin-right: 7px;
 }
 
 .main-button:hover {
@@ -23,21 +19,86 @@
     gap: 4px;
 }
 
-.button-text {
-    font-size: 20px;
-    padding: 5px;
-    background: none;
+@media screen and (min-width: 1000px) {
+    .main-button {
+        width: 140px;
+        height: 50px;
+        border-radius: 8px;
+        margin-right: 7px;
+    }
+
+    .button-text {
+        font-size: 20px;
+        padding: 5px;
+        background: none;
+    }
+
+    .material-icons {
+        background: None;
+        font-size: 30px;
+    }
+
+    img {
+        height: 27px;
+        width: 27px;
+        background: None;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
-.material-icons {
-    background: None;
-    font-size: 30px;
+@media screen and (max-width: 999px) {
+    .main-button {
+        width: 110px;
+        height: 40px;
+        border-radius: 5px;
+        margin-right: 4px;
+    }
+
+    .button-text {
+        font-size: 15px;
+        padding: 5px;
+        background: none;
+    }
+
+    .material-icons {
+        background: None;
+        font-size: 30px;
+    }
+
+    img {
+        height: 22px;
+        width: 22px;
+        background: None;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
-img {
-    height: 27px;
-    width: 27px;
-    background: None;
-    align-items: center;
-    justify-content: center;
+@media screen and (max-width: 400px) {
+    .main-button {
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        margin-right: 4px;
+    }
+
+    .button-text {
+        font-size: 15px;
+        padding: 0;
+        background: none;
+    }
+
+    .material-icons {
+        background: None;
+        font-size: 25px;
+    }
+
+    img {
+        height: 19px;
+        width: 19px;
+        background: None;
+        align-items: center;
+        justify-content: center;
+    }
 }
