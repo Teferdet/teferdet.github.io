@@ -1,0 +1,72 @@
+@media screen and (min-width: 1220px) {
+    .header-data {
+        position: relative;
+        padding: 120px 70px;
+        display: flex;
+        text-align: left;
+    }
+
+    h1 {
+        margin-left: 10px;
+    }
+
+    ul {
+        padding-left: 120px;
+        list-style-type: none;
+        flex-direction: column;
+        position: absolute;
+        transform: translate(0, -50%);
+        top: 50%;
+        border-right: solid 1px #e0e0e0;
+        padding-right: 45px;
+    }
+
+    .back-button {
+        .material-icons {
+            font-size: 40px;
+        }
+    }
+
+    .back-button:hover {
+        background: #505050;
+        border: solid #505050;
+        border-radius: 100%;
+    }
+
+    .button-option {
+        font-size: 30px;
+    }
+
+    .button-option:hover, .button-option:active {
+        border: #505050 solid;
+        background: #505050;
+        border-radius: 10px;
+    }
+
+    .main-contant{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        transform: translate(0, -50%);
+        left: 50%;
+        top: 50%;
+        align-items: center;
+
+
+        .material-icons {
+            color: #747474;
+            font-size: 400px;
+        }
+
+        h1 {
+            color: #747474;
+            font-size: 50px;
+        }
+
+        h2 {
+            color: #747474;
+        }
+    }
+
+
+}

@@ -12,6 +12,7 @@
     cursor: pointer;
 }
 .inside-button {
+    text-decoration: none;
     background: None;
     display: flex;
     flex-direction: row;
@@ -41,7 +42,6 @@
     img {
         height: 27px;
         width: 27px;
-        background: None;
         align-items: center;
         justify-content: center;
     }

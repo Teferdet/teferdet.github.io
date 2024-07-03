@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
-  background: #212223;
+  background: None;
   font-family: "PT Sans", sans-serif;
   color: #e0e0e0;
   border: 0;
   margin: 0;
+}
+
+body {
+  background: #212223;
 }
 
 @media screen and (min-width: 1000px) {
@@ -15,11 +19,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto 1fr;
-    gap: 2px;
-    padding: 2px;
-
   }
 
   .avatar {
@@ -42,6 +41,7 @@
   }
 
   .text h1 {
+    margin-left: -1px;
     font-size: 55px;
   }
 
@@ -51,7 +51,6 @@
 
   .button-container {
     padding-left: 63px;
-    padding-top: 20px;
     grid-column: 2;
     grid-row: 2;
     margin-top: 30px;
