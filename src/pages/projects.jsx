@@ -1,6 +1,6 @@
 import React from "react";
 import "./interface.css"
-import FunctionButtons from "../components/button_handlers/function_buttons";
+import FunctionButtons from "../components/button_handlers/change_page_buttons";
 
 function Projects(){
     document.title = "teferdet: poems";

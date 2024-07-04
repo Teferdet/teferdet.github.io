@@ -8,7 +8,7 @@ const data = {
     "back": <span className="material-icons">arrow_back</span>
 };
 
-function FunctionButtons({children}) {
+function ChangePage({children}) {
     const navigate = useNavigate();
     let img = data[children]
 
@@ -28,9 +28,14 @@ function FunctionButtons({children}) {
         };
 
         return (
-            <button className="back-button" onClick={handleGoBack}>{img}</button>
+            <button
+                className="back-button"
+                onClick={handleGoBack}
+            >
+                {img}
+            </button>
         );
     }
 }
 
-export default FunctionButtons;
+export default ChangePage;

@@ -1,5 +1,5 @@
 import avatar from "../images/avatar.jpg"
-import FunctionButtons from "../components/button_handlers/function_buttons";
+import ChangePage from "../components/button_handlers/change_page_buttons";
 import LinkButton from "../components/button_handlers/links_buttons";
 
 function Home(){
@@ -12,8 +12,8 @@ function Home(){
             </div>
             <div className="button-container">
                 <div className="front row">
-                    <FunctionButtons>Poems</FunctionButtons>
-                    <FunctionButtons>Projects</FunctionButtons>
+                    <ChangePage>Poems</ChangePage>
+                    <ChangePage>Projects</ChangePage>
                 </div>
                 <div className="second row">
                     <LinkButton>GitHub</LinkButton>
