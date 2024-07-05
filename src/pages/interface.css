@@ -1,0 +1,352 @@
+@media screen and (min-width: 750px) {
+    .mobile_btn {
+        display: none;
+    }
+
+    .header-data {
+        position: absolute;
+        top: 10%;
+        left: 3%;
+        display: flex;
+        text-align: left;
+    }
+
+    h1 {
+        margin-left: 10px;
+    }
+
+    .poem-list {
+        position: absolute;
+        padding-right: 50px;
+        list-style-type: none;
+        flex-direction: column;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 5%;
+        border-right: 1px solid #808080;
+    }
+
+    .back-button {
+        position: relative;
+        .material-icons {
+            font-size: 40px;
+        }
+    }
+
+    .back-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 3px 3px;
+        border-radius: 100%;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .back-button:hover::before {
+        opacity: 1;
+        background: #373737;
+    }
+
+    .button-option {
+        padding: 3px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .button-option::before,
+    .button-option-active::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0;
+        box-sizing: border-box;
+        border: #373737 solid;
+    }
+
+    .button-option:hover::before,
+    .button-option-active {
+        padding: 2px 5px;
+        opacity: 1;
+        background: #373737;
+        border-radius: 10px;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        align-items: center;
+
+        .material-icons {
+            color: #747474;
+        }
+
+        h1 {
+            color: #747474;
+        }
+
+        h2 {
+            color: #747474;
+        }
+    }
+
+    .poem {
+        padding-right: 10px;
+        overflow-y: auto;
+        max-height: 80vh;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        align-items: center;
+
+        .poem-head {
+            display: flex;
+            align-items: center;
+            background: #212223;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .poem-head h1 {
+            font-size: 50px;
+        }
+
+        .poem-head h3{
+            padding-top: 20px;
+            padding-left: 10px;
+            color: #747474;
+        }
+    }
+
+    @media screen and (min-width: 1220px)  {
+        .button-option {
+            font-size: 30px;
+        }
+
+        .info {
+            left: 40%;
+        }
+
+        .info .material-icons {
+            font-size: 400px;
+        }
+
+        .info h1 {
+            font-size: 50px;
+        }
+
+        .poem {
+            left: 40%;
+        }
+
+        .poem .poem-head h3 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+    }
+
+    @media screen and (max-width: 1219px) and (min-width: 750px) {
+        .button-option {
+            font-size: 25px;
+        }
+
+        .info {
+            left: 50%;
+        }
+
+        .info .material-icons {
+            font-size: 250px;
+        }
+
+        .info h1 {
+            font-size: 25px;
+        }
+
+        .poem {
+            left: 45%;
+        }
+
+
+        .poem .poem-head h1 {
+            font-size: 40px;
+        }
+
+        .poem .poem-head h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .page-name {
+        display: none;
+    }
+
+    .menu {
+        font-size: 400px;
+    }
+
+    .mobile_btn {
+        .material-icons {
+            color: #747474;
+            font-size: 33px;
+        }
+        display: flex;
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .poem-list {
+        list-style-type: none;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        left: -100%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 75%;
+        background: #212223;
+        z-index: 10;
+        transition: left 1s;
+    }
+
+    .active {
+        left: 0;
+    }
+
+    .button-option {
+        padding: 3px;
+        font-size: 25px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .button-option-active {
+        padding: 2px 5px;
+        opacity: 1;
+        background: #373737;
+        border-radius: 10px;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .material-icons {
+            color: #747474;
+            font-size: 200px;
+        }
+
+        h1 {
+            color: #747474;
+            font-size: 25px;
+        }
+
+        h2 {
+            font-size: 15px;
+            color: #747474;
+        }
+    }
+
+    .header-data {
+        position: absolute;
+        top: 3%;
+        left: 3%;
+        display: flex;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .back-button {
+        position: relative;
+        .material-icons {
+            color: #747474;
+            font-size: 33px;
+        }
+    }
+
+    .back-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 3px 3px;
+        border-radius: 100%;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .back-button:hover::before {
+        opacity: 1;
+        background: #373737;
+    }
+
+    .poem {
+        overflow-y: auto;
+        max-height: 90vh;
+        position: fixed;
+        top: 7%;
+        padding: 10px 25px ;
+
+        .poem-head {
+            display: flex;
+            align-items: center;
+            background: #212223;
+            flex-direction: column;
+            top: 0;
+            z-index: 1;
+            padding-bottom: 20px;
+        }
+
+        .poem-head h1 {
+            font-size: 40px;
+        }
+
+        .poem-head h3{
+            padding-left: 10px;
+            color: #747474;
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+    }
+}

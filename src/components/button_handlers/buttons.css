@@ -12,6 +12,7 @@
     cursor: pointer;
 }
 .inside-button {
+    text-decoration: none;
     background: None;
     display: flex;
     flex-direction: row;
@@ -41,7 +42,6 @@
     img {
         height: 27px;
         width: 27px;
-        background: None;
         align-items: center;
         justify-content: center;
     }
@@ -77,14 +77,14 @@
 
 @media screen and (max-width: 400px) {
     .main-button {
-        width: 100px;
-        height: 30px;
+        width: 110px;
+        height: 40px;
         border-radius: 5px;
         margin-right: 4px;
     }
 
     .button-text {
-        font-size: 15px;
+        font-size: 18px;
         padding: 0;
         background: none;
     }

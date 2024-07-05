@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    background: None;
+    font-family: "PT Sans", sans-serif;
+    color: #e0e0e0;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    background: #212223;
+}
+
+@keyframes wipeIn {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.about {
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    animation: wipeIn 1s ease-in-out forwards;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.avatar {
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    align-items: normal;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+}
+
+@media screen and (min-width: 1000px) {
+    .about {
+        display: grid;
+    }
+
+    .avatar {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        object-fit: cover;
+        width: 350px;
+        height: 350px;
+    }
+
+    .text {
+        padding-left: 63px;
+        padding-top: 20px;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .text h1 {
+        margin-left: -1px;
+        font-size: 55px;
+    }
+
+    .description {
+        font-size: 25px;
+    }
+
+    .button-container {
+        padding-left: 63px;
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .main-button:hover {
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avatar {
+        width: 250px;
+        height: 250px;
+    }
+
+    .text {
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 50px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avatar {
+        width: 200px;
+        height: 200px;
+    }
+
+    .text {
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+}
