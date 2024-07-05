@@ -8,6 +8,7 @@ function Poems() {
 
     const [activeButton, setActiveButton] = useState(null);
     const [content, setContent] = useState(null);
+    const [burger, setBurger] = useState(false);
 
     let info = (
         <div className="info">
@@ -60,21 +61,24 @@ function Poems() {
         <>
             <div className="header-data">
                 <ChangePage>back</ChangePage>
-                <h1>Poems</h1>
+                <h1 className="page-name">Poems</h1>
             </div>
-            <div className="poem-list-container">
-                <div className="poem-list">
-                    {
-                        poems.map(poem =>
-                            <ListItem
-                                key={poem.title}
-                                {...poem}
-                            />)
-                    }
-                </div>
+            <div onClick={() => setBurger(!burger)} className="mobile_btn">
+                <span className="material-icons">{burger ? 'close' : 'menu'}</span>
             </div>
-            {content ? null : info }
-            {!content ? null : content  }
+            <div className={
+                burger ? ["poem-list", "active"].join(' ') : ["poem-list"]
+            }>
+                {
+                    poems.map(poem =>
+                        <ListItem
+                            key={poem.title}
+                            {...poem}
+                        />)
+                }
+            </div>
+            {content ? null : info}
+            {!content ? null : content}
         </>
     );
 }

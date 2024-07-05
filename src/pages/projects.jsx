@@ -6,10 +6,12 @@ function Projects(){
     document.title = "teferdet: poems";
 
     return (
-        <div className="header-data">
-            <FunctionButtons>back</FunctionButtons>
-            <h1>Projects</h1>
-        </div>
+        <>
+            <div className="header-data">
+                <FunctionButtons>back</FunctionButtons>
+                <h1>Projects</h1>
+            </div>
+        </>
     )
 }
 
