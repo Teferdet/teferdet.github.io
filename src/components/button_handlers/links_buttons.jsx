@@ -1,9 +1,9 @@
 import './buttons.css'
-import github from "../../images/github.svg";
-import telegram from "../../images/telegram.svg";
-import steam from "../../images/steam.svg";
-import bmac from "../../images/bmac.svg";
-import donatello from "../../images/donatello.svg";
+import github from "../../pages/images/github.svg";
+import telegram from "../../pages/images/telegram.svg";
+import steam from "../../pages/images/steam.svg";
+import bmac from "../../pages/images/bmac.svg";
+import donatello from "../../pages/images/donatello.svg";
 
 const option = {
     "GitHub":[github, "https://github.com/teferdet"],

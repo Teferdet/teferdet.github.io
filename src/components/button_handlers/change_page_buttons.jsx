@@ -1,6 +1,6 @@
 import './buttons.css'
 import React from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const data = {
     "Poems": <span className="material-icons">book</span>,
@@ -9,7 +9,6 @@ const data = {
 };
 
 function ChangePage({children}) {
-    const navigate = useNavigate();
     let img = data[children]
 
     if (children !== "back") {
@@ -23,16 +22,9 @@ function ChangePage({children}) {
             </button>
         );
     } else {
-        const handleGoBack = () => {
-            navigate(-1);
-        };
-
         return (
-            <button
-                className="back-button"
-                onClick={handleGoBack}
-            >
-                {img}
+            <button className="back-button">
+                <Link to="/">{img}</Link>
             </button>
         );
     }

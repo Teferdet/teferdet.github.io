@@ -1,4 +1,4 @@
-import avatar from "../images/avatar.jpg"
+import avatar from "./images/avatar.jpg"
 import ChangePage from "../components/button_handlers/change_page_buttons";
 import LinkButton from "../components/button_handlers/links_buttons";
 

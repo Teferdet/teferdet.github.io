@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import "./interface.css";
 import ChangePage from "../components/button_handlers/change_page_buttons";
 import { poems } from "./data";
@@ -9,6 +10,17 @@ function Poems() {
     const [activeButton, setActiveButton] = useState(null);
     const [content, setContent] = useState(null);
     const [burger, setBurger] = useState(false);
+    const location = useLocation();
+
+    useEffect(() => {
+        const hash = location.hash.replace("#", "");
+        if (hash) {
+            const poem = poems.find(p => p.id === hash);
+            if (poem) {
+                button_handler(poem);
+            }
+        }
+    }, [location]);
 
     let info = (
         <div className="info">
@@ -22,7 +34,7 @@ function Poems() {
         return (
             <li>
                 <button
-                    className={`button-option ${activeButton === props.title ? 'button-option-active' : ''}`}
+                    className={`button-option ${activeButton === props.id ? 'button-option-active' : ''}`}
                     onClick={() => button_handler(props)}
                 >
                     <h3>{props.title}</h3>
@@ -32,12 +44,16 @@ function Poems() {
     }
 
     function button_handler(poem) {
-        setActiveButton(poem.title);
+        setActiveButton(poem.id);
 
         const newContent = (
-            <div className="poem">
+            <div className="poem" id={poem.id}>
                 <div className="poem-head">
-                    <h1>{poem.title}</h1>
+                    <h1>
+                        <button onClick={() => copyToClipboard(`${window.location.origin}/?/poems#${poem.id}`)}>
+                            <span className="material-icons">content_copy</span>
+                        </button> {poem.title}
+                    </h1>
                     <h3>published: {poem.published}</h3>
                 </div>
                 <div className="poem-body">
@@ -53,8 +69,16 @@ function Poems() {
             </div>
         );
 
-
         setContent(newContent);
+        window.location.hash = poem.id;
+    }
+
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert("URL is save!");
+        }, () => {
+            console.error("Sorry,try again");
+        });
     }
 
     return (
@@ -72,7 +96,7 @@ function Poems() {
                 {
                     poems.map(poem =>
                         <ListItem
-                            key={poem.title}
+                            key={poem.id}
                             {...poem}
                         />)
                 }

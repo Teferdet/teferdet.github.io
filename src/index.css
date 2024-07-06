@@ -12,6 +12,22 @@ body {
     background: #212223;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #373737;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #373737;
+    border-radius: 10px;
+}
+
+
 @keyframes wipeIn {
     0% {
         clip-path: inset(0 100% 0 0);
