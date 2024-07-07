@@ -352,3 +352,7 @@ export const poems = [
             "Але це десь за обрієм моїх мрій.<br>" +
             "<br>"},
 ]
+
+export const projects = [
+    {title:"finances", image:".//", about:"", news:"", id:"finances" }
+]

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+
 import { useLocation } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./interface.css";
 import ChangePage from "../components/button_handlers/change_page_buttons";
 import { poems } from "./data";
@@ -50,9 +53,10 @@ function Poems() {
             <div className="poem" id={poem.id}>
                 <div className="poem-head">
                     <h1>
-                        <button onClick={() => copyToClipboard(`${window.location.origin}/?/poems#${poem.id}`)}>
-                            <span className="material-icons">content_copy</span>
-                        </button> {poem.title}
+                        <button onClick={() => copyToClipboard(`${window.location.origin}/poems#${poem.id}`)}>
+                            <span className="material-icons">link</span>
+                        </button>
+                        {poem.title}
                     </h1>
                     <h3>published: {poem.published}</h3>
                 </div>
@@ -75,9 +79,13 @@ function Poems() {
 
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text).then(() => {
-            alert("URL is save!");
+            toast.success("URL cope!", {
+                className: 'custom-toast-success',
+            });
         }, () => {
-            console.error("Sorry,try again");
+            toast.error("Sorry, try again", {
+                className: 'custom-toast-error',
+            });
         });
     }
 
@@ -103,6 +111,7 @@ function Poems() {
             </div>
             {content ? null : info}
             {!content ? null : content}
+            <ToastContainer />
         </>
     );
 }
