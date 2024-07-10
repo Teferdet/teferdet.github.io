@@ -21,7 +21,6 @@ body {
     border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: #373737;
     border-radius: 10px;

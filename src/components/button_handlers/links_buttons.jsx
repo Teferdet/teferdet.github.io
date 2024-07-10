@@ -11,7 +11,7 @@ const option = {
     "Steam":[steam, "https://steamcommunity.com/id/teferdet/"],
     "Card":"https://send.monobank.ua/jar/8TC79v49FX",
     "BMaC":[bmac, "https://www.buymeacoffee.com/teferdet"],
-    "Donatello":[donatello, "https://donatello.to/teferdet"]
+    "Donatello":[donatello, "https://donatello.to/teferdet"],
 };
 
 function LinkButton({ children }) {

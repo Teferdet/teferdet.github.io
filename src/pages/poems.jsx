@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-
 import { useLocation } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import "./interface.css";
 import ChangePage from "../components/button_handlers/change_page_buttons";
 import { poems } from "./data";
+import 'react-toastify/dist/ReactToastify.css';
+import "./interface.css";
 
 function Poems() {
     document.title = "teferdet: poems";
@@ -50,18 +49,21 @@ function Poems() {
         setActiveButton(poem.id);
 
         const newContent = (
-            <div className="poem" id={poem.id}>
-                <div className="poem-head">
+            <div className="page-poem-contant" id={poem.id}>
+                <div className="head">
                     <h1>
-                        <button onClick={() => copyToClipboard(`${window.location.origin}/poems#${poem.id}`)}>
+                        <button
+                            onClick={() => copyToClipboard(`${window.location.origin}/poems#${poem.id}`)}
+                            className="copy-to-clipboard"
+                        >
                             <span className="material-icons">link</span>
                         </button>
                         {poem.title}
                     </h1>
                     <h3>published: {poem.published}</h3>
                 </div>
-                <div className="poem-body">
-                    <p>
+                <div className="body">
+                    <p className="poem-text">
                         {poem.poem.split('<br>').map((line, index) => (
                             <React.Fragment key={index}>
                                 {line}
@@ -99,7 +101,7 @@ function Poems() {
                 <span className="material-icons">{burger ? 'close' : 'menu'}</span>
             </div>
             <div className={
-                burger ? ["poem-list", "active"].join(' ') : ["poem-list"]
+                burger ? ["contant-list", "active"].join(' ') : ["contant-list"]
             }>
                 {
                     poems.map(poem =>

@@ -3,6 +3,8 @@ import ChangePage from "../components/button_handlers/change_page_buttons";
 import LinkButton from "../components/button_handlers/links_buttons";
 
 function Home(){
+    document.title = "teferdet";
+
     return (
         <header className="about">
             <img src={avatar} className="avatar" alt="face"/>

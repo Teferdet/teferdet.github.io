@@ -353,6 +353,18 @@ export const poems = [
             "<br>"},
 ]
 
-export const projects = [
-    {title:"finances", image:".//", about:"", news:"", id:"finances" }
-]
+    export const projects = [
+        {
+            title:"finances",
+            version:"4 build 11 release Vol. 1",
+            about:"<b>finances</b> — Telegram bot for convenient exchange rate and conversion of currencies/cryptocurrencies and stocks overview.<br>" +
+                "It is a convenient tool that can be used as you wish. In personal messages with the bot or with your interlocutor (write @fStatisticsBot or go to the bot) and group.<br>" +
+                "Customise it to your own needs as you see fit.",
+            news:"we add new penis",
+            id:"finances",
+            urls:{
+                telegram:"https://t.me/fStatisticsBot/",
+                github:"https://github.com/teferdet/finances",
+            }
+        }
+    ]

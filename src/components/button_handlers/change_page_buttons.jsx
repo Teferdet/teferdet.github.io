@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const data = {
     "Poems": <span className="material-icons">book</span>,
-    "Projects": <span className="material-icons">precision_manufacturing</span>,
+    "Projects": <span className="material-icons">code</span>,
     "back": <span className="material-icons">arrow_back</span>
 };
 
